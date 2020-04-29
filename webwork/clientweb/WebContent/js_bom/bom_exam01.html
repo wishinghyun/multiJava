@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function printExam() {
+		amount = myform.bomex.value
+		document.getElementById("result").innerHTML = amount * (12900 - 12900 / 10)
+	}
+</script>
+</head>
+<body>
+	<form name="myform">
+		수량:<input type="text" name="bomex" onkeyup="printExam()"> 
+		<span id="result" style="color: red"></span>
+	</form>
+</body>
+</html>

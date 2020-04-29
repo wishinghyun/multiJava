@@ -1,0 +1,11 @@
+package api.io;
+
+import java.io.File;
+
+public class FileTest01 {
+	public static void main(String[] args) {
+		//엑세스하고 싶은 파일이나 폴더의 위치를 File객체 만들때 매개변수에 정의
+		//1. c:/\iot\iotest폴더 - c:\\iot\\iotest
+		File file1 = new File("c:/iot/iotest"); // \t, \n
+	}
+}

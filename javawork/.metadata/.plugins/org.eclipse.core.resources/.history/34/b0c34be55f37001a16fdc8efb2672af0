@@ -1,0 +1,38 @@
+package api.io;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+//BufferedReader로 한 문장씩 읽기
+public class BufferedReaderTest {
+	public static void main(String[] args) {
+		BufferedReader br = null;
+		try{
+			//1. 파일 오픈하기
+			//fr = new FileReader("src/data/test.txt");//기본스트림
+			//br = new BufferedReader(fr);//보조스트림 - 기본스트림과 연결
+			//BufferedReader는 보조스트림으로 원시데이터와 연결할 수 없으므로
+			//원시데이터를 읽을 수 있는 기본스트림을 생성해서 넘겨주어야 한다 
+			br = new BufferedReader(new FileReader("src/data/test.txt"));
+			while(true) {
+				String data = br.readLine();
+				if(data==null) {
+					break;
+				}
+				System.out.print(data);
+			}
+		}catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}finally {
+			//3. 파일 닫기
+			try{
+				if(fr!=null)fr.close();
+			}catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

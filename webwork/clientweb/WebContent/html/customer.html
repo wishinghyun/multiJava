@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th colspan="2">회원가입</th>
+		</tr>
+		<tr>
+			<td>이름</td>
+			<td><input type="text" name=id size="20"></td>
+		</tr>
+		<tr>
+			<td width="100">사용자 ID</td>
+			<td><input type="text" name=id size="20"></td>
+		</tr>
+		<tr>
+			<td>암호</td>
+			<td><input type="text" name=pass size="20"></td>
+		</tr>
+		<tr>
+			<td>암호확인</td>
+			<td><input type="text" name=passcheck size="30"></td>
+		</tr>
+		<tr>
+			<td>주민등록번호</td>
+			<td>
+				<input type="number" name=pnum1 size="10">
+				<input type="number" name=pnum2 size="10">
+			</td>
+		</tr>
+		<tr>
+			<td>전화번호</td>
+			<td>
+				<input type="number" name=pnum1 size="4">-
+				<input type="number" name=pnum1 size="4">-
+				<input type="number" name=pnum1 size="4">
+			</td>
+		</tr>
+		<tr>
+			<td>성별</td>
+			<td>
+				<input type="radio" name="성별" value="남자">남자
+				<input type="radio" name="성별" value="여자">여자
+			</td>
+		</tr>
+		<tr>
+			<td>직업</td>
+			<td>
+			<select name="직업">
+				<option value="선택하여주십시오">선택하여주십시오</option>
+				<option value="웹디자이너">웹디자이너</option>
+				<option value="개발자">개발자</option>
+				<option value="빅데이터개발자">빅데이터개발자</option>
+				<option value="DBA">DBA</option>
+				<option value="임베디드개발자">임베디드개발자</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td>email주소</td>
+			<td><input type="email" name=email size="20"></td>
+		</tr>
+		<tr align="center">
+			<td colspan="2">
+			<input type="submit" value="가입신청">
+			<input type="reset" value="취소">
+			</td>
+		</tr>
+	
+	</table>
+</body>
+</html>

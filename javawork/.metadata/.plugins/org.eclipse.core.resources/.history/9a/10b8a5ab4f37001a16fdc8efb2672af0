@@ -1,0 +1,24 @@
+package api.io;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+//advancedJava 프로젝트폴더 아래 저장된 test.txt의 내용을 읽어서 콘솔에 출력하기
+public class FileInputStreamTest {
+	public static void main(String[] args) {
+		FileInputStream fis = null;
+		try{
+			//1. 파일 오픈하기
+			fis = new FileInputStream("test.txt");
+		}catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}finally {
+			//3. 파일 닫기
+			try{
+				fis.close();
+			}catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

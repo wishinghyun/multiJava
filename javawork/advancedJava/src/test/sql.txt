@@ -1,0 +1,29 @@
+SQL> create table customer(
+  2     id varchar2(20) primary key,
+  3     pass varchar2(20),
+  4     name varchar2(20) not null,
+  5     regdate date,
+  6     point number,
+  7     addr varchar2(30));
+
+Table created.
+
+SQL> insert into customer values ('abc','123','kim',sysdate,100,'seoul');
+
+1 row created.
+
+SQL> insert into customer values ('def','456','lee',sysdate,1000,'seoul');
+
+1 row created.
+
+SQL> insert into customer values ('zxc','789','kang','19/11/11',10000,'korea');
+
+1 row created.
+
+SQL> select * from customer;
+
+ID                                       PASS                                     NAME                                     REGDATE       POINT ADDR
+---------------------------------------- ---------------------------------------- ---------------------------------------- -------- ---------- ----------
+abc                                      123                                      kim                                      19/12/27        100 seoul
+def                                      456                                      lee                                      19/12/27       1000 seoul
+zxc                                      789                                      kang                                     19/11/11      10000 korea

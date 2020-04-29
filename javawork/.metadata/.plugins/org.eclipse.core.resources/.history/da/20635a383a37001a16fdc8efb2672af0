@@ -1,0 +1,24 @@
+package api.io;
+
+import java.io.File;
+
+//폴더의 내부를 탐색
+public class FileTest02 {
+	public static void main(String[] args) {
+		// c:\iot\iotest폴더의 하위 폴더 및 파일을 출력
+		// [출력형태]
+		// a ---------[폴더]
+		// b ---------[폴더]
+		//ArrayTest01.java ---------[파일 : (파일의 사이즈 출력)]
+		//.
+		File a = new File("c:/iot/iotest/a");
+		//.
+		File b = new File("c:/iot/iotest/b");
+		//.
+		File c = new File("C:/iot/work/javawork/basicJava/src/chap05/ArrayTest01.java");
+		System.out.println("a --------"+a);
+		System.out.println("b --------"+b);
+		System.out.println("ArrayTest01.java --------"+c+":"+c.length());
+		
+	}
+}
